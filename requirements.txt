@@ -1,0 +1,20 @@
+# Plampture 项目依赖
+
+# Qt GUI 框架
+PySide6>=6.5.0
+
+# 图像处理
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# 二维码识别
+pyzbar>=0.1.9
+
+# Windows 摄像头控制
+pygrabber>=0.1
+
+# 日志
+loguru>=0.7.0
+
+# 打包工具（开发环境）
+pyinstaller>=6.0.0

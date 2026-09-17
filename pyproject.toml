@@ -1,0 +1,25 @@
+# Plampture 项目 - Black 代码格式化配置
+
+[tool.black]
+line-length = 120
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # 默认排除的目录
+  \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | workspace
+  | __pycache__
+  
+  # UI 生成的文件
+  | .*_ui\.py
+)/
+'''

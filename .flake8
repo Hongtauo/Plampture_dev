@@ -1,0 +1,38 @@
+# Plampture 项目代码规范配置
+# 使用 flake8 进行代码检查
+
+[flake8]
+# 最大行长度
+max-line-length = 120
+
+# 忽略的错误代码
+ignore = 
+    # E501: 行过长 (已在 max-line-length 中设置)
+    E501,
+    # W503: 二元运算符前换行 (与 PEP 8 新版本冲突)
+    W503,
+    # E203: 切片中的空格 (与 black 冲突)
+    E203,
+    # E266: 注释前有太多 # 号
+    E266,
+    # E402: 模块级导入不在文件顶部 (某些情况下需要)
+    E402
+
+# 排除的目录
+exclude = 
+    .git,
+    __pycache__,
+    .vscode,
+    workspace,
+    build,
+    dist,
+    *.egg-info,
+    .pytest_cache,
+    .mypy_cache
+
+# 每个文件的最大复杂度
+max-complexity = 15
+
+# 统计信息
+statistics = True
+count = True
