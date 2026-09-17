@@ -34,7 +34,7 @@ pip install -r requirements.txt
 ### 运行程序
 
 ```bash
-python main.py
+python setup.py
 ```
 
 ---
@@ -43,7 +43,7 @@ python main.py
 
 ```
 Plampture/
-├── main.py                      # 主程序入口
+├── main.py                      # 采集窗口，由 setup.py 启动
 ├── camera_manager.py            # 摄像头管理模块
 ├── capture.py                   # 快照捕获模块
 ├── snapshot_io.py               # 快照 I/O 模块
@@ -51,7 +51,7 @@ Plampture/
 ├── plam_ROI_worker.py           # MediaPipe 手部检测 Worker
 ├── scan_QRcode.py               # 二维码识别模块
 ├── export.py                    # 数据导出模块
-├── setup.py                     # 项目设置模块
+├── setup.py                     # 程序入口，项目管理与启动
 ├── dynamic_layout.py            # UI 动态布局
 ├── Plampture.ui                 # Qt Designer UI 文件
 ├── Plampture_ui.py              # UI 代码 (自动生成)
@@ -134,13 +134,13 @@ flake8
 
 ## 📖 使用说明
 
-### 1. 创建项目
+### 1. 创建并打开项目
 
-首次运行会弹出项目设置窗口:
+在项目根目录运行 `python setup.py`，打开项目管理窗口：
 
-1. 输入项目 ID 和名称
-2. 选择工作目录
-3. 点击确认创建项目
+1. 点击“新建”，输入项目名称；项目 ID 自动生成，数据保存在 `workspace/` 下。
+2. 在列表中选择项目，点击“打开...”或双击项目。
+3. 程序自动启动对应项目的采集窗口。
 
 ### 2. 配置摄像头
 
@@ -158,11 +158,11 @@ flake8
 
 ### 4. 导出数据
 
-在菜单栏选择 `文件 > 导出`:
+在项目管理窗口中导出：
 
-1. 选择导出目录
-2. 确认导出
-3. 数据按用户和手部分类导出
+1. 选中需要导出的项目，点击“导出”。
+2. 选择导出目录。
+3. 数据按图像类型、用户和手部分类导出。
 
 ---
 
